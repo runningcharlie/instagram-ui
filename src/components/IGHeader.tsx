@@ -1,9 +1,19 @@
+import { useNavigate } from "react-router-dom";
+
 const IGHeader: React.FC = () => {
+  const go = useNavigate();
   return (
     <header className="sticky top-0 bg-white border-b-[1px] border-gray-300">
       <div className="flex justify-between items-center h-[60px] px-2 box-border lg:max-w-[1024px] lg:mx-auto lg:px-0">
         {/* 左侧 */}
-        <img className="w-[100px] cursor-pointer" src="/images/logo.svg" />
+        <img
+          className="w-[100px] cursor-pointer"
+          src="/images/logo.svg"
+          alt=""
+          onClick={() => {
+            go("/");
+          }}
+        />
         {/* 右侧 导览按钮 + 头像 */}
         <div className="flex items-center">
           <svg
@@ -12,6 +22,9 @@ const IGHeader: React.FC = () => {
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
+            onClick={() => {
+              go("/");
+            }}
           >
             <path
               strokeLinecap="round"
@@ -26,6 +39,9 @@ const IGHeader: React.FC = () => {
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
+            onClick={() => {
+              go("/following");
+            }}
           >
             <path
               strokeLinecap="round"
