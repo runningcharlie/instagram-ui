@@ -15,7 +15,11 @@ const Home: React.FC = () => {
           </div>
           {/* right */}
           <div className="hidden lg:block lg:w-[424px]">
-            <IGUser />
+            <IGUser
+              avatar="/images/avatars/a6.png"
+              account="louis"
+              location="南港區"
+            />
           </div>
         </div>
       </IGContainer>
