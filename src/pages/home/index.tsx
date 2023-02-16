@@ -1,5 +1,11 @@
+import Header from "../../components/IGHeader";
+
 const Home: React.FC = () => {
-  return <p>Home</p>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 };
 
 export default Home;
