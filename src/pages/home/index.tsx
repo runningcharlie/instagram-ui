@@ -1,6 +1,7 @@
 import Header from "../../components/IGHeader";
 import IGContainer from "../../components/IGContainer";
 import IGStory from "./components/IGStory";
+import IGUser from "../../components/IGUser";
 
 const Home: React.FC = () => {
   return (
@@ -13,7 +14,9 @@ const Home: React.FC = () => {
             <IGStory />
           </div>
           {/* right */}
-          <div className="hidden lg:block lg:w-[424px]"></div>
+          <div className="hidden lg:block lg:w-[424px]">
+            <IGUser />
+          </div>
         </div>
       </IGContainer>
     </>
