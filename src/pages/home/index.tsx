@@ -2,7 +2,7 @@ import Header from "../../components/IGHeader";
 import IGContainer from "../../components/IGContainer";
 import IGStory from "./components/IGStory";
 import IGPost from "./components/IGPost";
-import IGUser from "../../components/IGUser";
+import IGProfile from "./components/IGProfile";
 
 const IGPostList: React.FC = () => {
   const data = [
@@ -107,11 +107,7 @@ const Home: React.FC = () => {
           </div>
           {/* right */}
           <div className="hidden lg:block lg:w-[424px]">
-            <IGUser
-              avatar="/images/avatars/a6.png"
-              account="louis"
-              location="南港區"
-            />
+            <IGProfile />
           </div>
         </div>
       </IGContainer>
