@@ -84,6 +84,7 @@ const Following: React.FC = () => {
           {friends.map((item) => {
             const { id, account, avatar, isFollowing, location } = item;
             return (
+              // key 一定要放在最外层元素
               <div className="-mt-3" key={id}>
                 <IGUser
                   id={id}
