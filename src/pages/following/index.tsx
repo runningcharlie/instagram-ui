@@ -84,9 +84,8 @@ const Following: React.FC = () => {
           {friends.map((item) => {
             const { id, account, avatar, isFollowing, location } = item;
             return (
-              <div className="-mt-3">
+              <div className="-mt-3" key={id}>
                 <IGUser
-                  key={id}
                   id={id}
                   account={account}
                   avatar={avatar}
