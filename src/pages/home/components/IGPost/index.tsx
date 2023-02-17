@@ -1,4 +1,5 @@
 import IGUser from "components/IGUser";
+import Comment from "./Comment";
 
 type IGPostProps = {
   account: string;
@@ -16,11 +17,22 @@ const IGPost: React.FC<IGPostProps> = ({
   location,
   avatar,
   photo,
+  likes,
+  description,
+  hashTags,
+  createTime,
 }) => {
   return (
     <div className="shadow-md pb-4 lg:mb-8">
       <IGUser account={account} location={location} avatar={avatar} />
       <img src={photo} alt="" />
+      <Comment
+        account={account}
+        likes={likes}
+        description={description}
+        hashTags={hashTags}
+        createTime={createTime}
+      />
     </div>
   );
 };
