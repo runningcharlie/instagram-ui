@@ -8,8 +8,8 @@ const IGProfile: React.FC = () => {
   return (
     <div className="mt-8 ml-8 shadow-lg box-border p-2">
       <IGUser
-        account="bruce_fe"
-        location="布魯斯前端"
+        account="charlie"
+        location="guangzhou"
         avatar="/images/avatar.png"
         size="medium"
       />

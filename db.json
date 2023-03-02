@@ -2,7 +2,7 @@
   "posts": [
     {
       "id": 1,
-      "location": "布魯斯前端",
+      "location": "jiuzhou",
       "account": "bruce_1234",
       "avatar": "/images/avatars/a1.png",
       "photo": "/images/posts/main1.png",
@@ -13,7 +13,7 @@
     },
     {
       "id": 2,
-      "location": "7-11你好門市",
+      "location": "7-11",
       "account": "__0831_xxx__",
       "avatar": "/images/avatars/a2.png",
       "photo": "/images/posts/main2.png",
