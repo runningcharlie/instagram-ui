@@ -20,3 +20,5 @@ export const homeApi = createApi({
     }),
   }),
 });
+
+export const { useGetIGStoiesQuery } = homeApi;
