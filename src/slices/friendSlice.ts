@@ -111,3 +111,7 @@ export const friendSlice = createSlice({
     },
   },
 });
+
+export const { follow, unFollow } = friendSlice.actions;
+
+export default friendSlice.reducer;
