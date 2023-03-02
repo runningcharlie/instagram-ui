@@ -86,3 +86,9 @@ const initialState: friendState = {
     },
   ],
 };
+
+export const friendSlice = createSlice({
+  name: "friendsList",
+  initialState,
+  reducers: {},
+});
