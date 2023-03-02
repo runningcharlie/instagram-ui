@@ -16,33 +16,7 @@ const IGPostList: React.FC = () => {
           <Loading />
         </div>
       ) : (
-        data?.map(
-          ({
-            id,
-            location,
-            account,
-            avatar,
-            photo,
-            likes,
-            description,
-            hashTags,
-            createTime,
-          }) => {
-            return (
-              <IGPost
-                location={location}
-                account={account}
-                avatar={avatar}
-                photo={photo}
-                likes={likes}
-                description={description}
-                hashTags={hashTags}
-                createTime={createTime}
-                key={id}
-              />
-            );
-          }
-        )
+        data?.map((item) => <IGPost {...item} />)
       )}
     </>
   );
