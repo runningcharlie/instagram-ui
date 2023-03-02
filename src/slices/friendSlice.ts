@@ -1,6 +1,18 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initialState = {
+type Friend = {
+  id: number;
+  location: string;
+  account: string;
+  isFollowing: boolean;
+  avatar: string;
+};
+
+type friendState = {
+  friends: Friend[];
+};
+
+const initialState: friendState = {
   friends: [
     {
       id: 1,
