@@ -90,5 +90,24 @@ const initialState: friendState = {
 export const friendSlice = createSlice({
   name: "friendsList",
   initialState,
-  reducers: {},
+  reducers: {
+    follow: (state, action: PayloadAction<number>) => {
+      const friends = state.friends;
+      for (let i = 0; i < friends.length; i++) {
+        const friend = friends[i];
+        if (friend.id === action.payload) {
+          friend.isFollowing = true;
+        }
+      }
+    },
+    unFollow: (state, action: PayloadAction<number>) => {
+      const friends = state.friends;
+      for (let i = 0; i < friends.length; i++) {
+        const friend = friends[i];
+        if (friend.id === action.payload) {
+          friend.isFollowing = false;
+        }
+      }
+    },
+  },
 });
