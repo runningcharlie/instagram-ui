@@ -6,14 +6,14 @@ const IGHeader: React.FC = () => {
     <header className="sticky top-0 bg-white border-b-[1px] border-gray-300">
       <div className="flex justify-between items-center h-[60px] px-2 box-border lg:max-w-[1024px] lg:mx-auto lg:px-0">
         {/* 左侧 */}
-        <img
+        {/* <img
           className="w-[100px] cursor-pointer"
           src="/images/logo.svg"
           alt=""
           onClick={() => {
             go("/");
           }}
-        />
+        /> */}
         {/* 右侧 导览按钮 + 头像 */}
         <div className="flex items-center">
           <svg
