@@ -1,23 +1,50 @@
 import Header from "../../components/IGHeader";
 import IGContainer from "../../components/IGContainer";
-import Loading from "../../components/Loading";
-
+// import Loading from "../../components/Loading";
+import { useState, useEffect } from "react";
 import IGStory from "./components/IGStory";
 import IGPost from "./components/IGPost";
 import IGProfile from "./components/IGProfile";
-import { useGetIGPostsQuery } from "../../services/homeService";
+// import { useGetIGPostsQuery } from "../../services/homeService";
 
 const IGPostList: React.FC = () => {
-  const { data, isLoading } = useGetIGPostsQuery("all");
+  // const { data } = useGetIGPostsQuery("all");
+
+  const [post, setPost] = useState([]);
+
+  useEffect(() => {
+    fetch("api/posts.json")
+      .then((res) => res.json())
+      .then((data) => setPost(data));
+  }, []);
   return (
     <>
-      {isLoading ? (
-        <div className="flex justify-center w-full">
-          <Loading />
-        </div>
-      ) : (
-        data?.map((item) => <IGPost {...item} />)
-      )}
+      {post.map((item) => {
+        const {
+          id,
+          location,
+          account,
+          avatar,
+          photo,
+          likes,
+          description,
+          hashTags,
+          createTime,
+        } = item;
+        return (
+          <IGPost
+            location={location}
+            account={account}
+            avatar={avatar}
+            photo={photo}
+            likes={likes}
+            description={description}
+            hashTags={hashTags}
+            createTime={createTime}
+            key={id}
+          />
+        );
+      })}
     </>
   );
 };
