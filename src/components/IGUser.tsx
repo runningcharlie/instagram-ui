@@ -1,3 +1,8 @@
+// dispatch
+import { useAppDispatch } from "../hooks";
+// action
+import { follow, unFollow } from "../slices/friendSlice";
+
 type IGUserProps = {
   size?: "medium" | "small"; // 头像尺寸
   showFollow?: boolean; // 是否显示Follow按钮
